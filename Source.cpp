@@ -278,7 +278,7 @@ public:
     }
 };
 
-bool chkdate(int day, int month) {
+bool chkdate(int &day, int &month) {
     while (day > 31 || day <= 0 || month > 12 || month <= 0) {
         if (day > 31 || day <= 0) {
             cout << "The valid day is wrong" << endl;
@@ -317,7 +317,7 @@ int main() {
     cout << "please Enter day and month" << endl;
     cin >> day >> month;
 
-    while (chkdate(day, month)) {
+    while (chkdate(day, month)==1) {
         start();
         cin >> account;
         switch (account) {
